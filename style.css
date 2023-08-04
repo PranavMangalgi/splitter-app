@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    --hover-color:hsl(172, 67%, 45%);
+    --body-bgcolor:hsl(185, 41%, 84%);
+    --card-bgcolor:hsl(0, 0%, 100%);
+    --input-bgcolor:hsl(184, 14%, 56%);
+    --option-bgcolor:hsl(183, 100%, 15%);
+    --white:hsl(0, 0%, 100%);
+
+    --custom-bgcolor:hsl(189, 41%, 97%);
+    --custom-fcolor:hsl(186, 14%, 43%);
+
+    --input-color:hsl(183, 100%, 15%) ;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono','sans-serif';
+    color: var(--custom-fcolor) ;
+}
+
+body{
+    background-color: var(--body-bgcolor);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container img:first-of-type{
+    height: 100%;
+    margin: 2rem auto;
+}
+
+.card{
+    background-color: var(--card-bgcolor);
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+    width: 100vw;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.card-pt1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bill-input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.bill-input input{
+    outline: none;
+    padding:  .75rem ;
+}
+
+input{
+    border-radius: 5px;
+    text-align: right;
+    font-size: 1.15rem;
+    background-color:var(--custom-bgcolor);
+    border:none;
+    color: var(--input-color);
+    caret-color: var(--hover-color);
+}
+
+.bill-input  img{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: -17px;
+    left: 17px;
+}
+
+.options label{
+    display: inline-block;
+    margin: .5rem 0;
+}
+
+.tip-options div{
+    width: 37vw;
+    background-color: var(--option-bgcolor);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.tip-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.tip-options div:hover{
+    background-color: var(--hover-color);
+    transform: all 0.3s ease;
+}
+
+
+.tip-options div:last-of-type{
+    padding: 0;
+}
+#custom{
+    background-color: var(--custom-bgcolor);
+    color: var(--custom-fcolor) ;
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#custom::placeholder{
+    text-align: center;
+}
+
+.people{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.people div:first-of-type{
+    display: flex;
+    justify-content: space-between;
+}
+
+.people img{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.people input{
+    outline: none;
+    padding:  .75rem ;
+    margin-top: .75rem;
+}
+
+.output{
+    background-color: var(--input-color) ;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    border-radius: 15px;
+}
+
+.output p{
+    width: 40vw;  
+    font-size: .8rem;
+}
+
+.output span{
+    color: var(--card-bgcolor);
+    font-size: .9rem;
+}
+
+.output .amount-container{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.amount{
+    font-size: 2rem;
+    color: var(--hover-color);
+}
+
+.output button{
+    padding: .5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--hover-color);
+    color: var(--option-bgcolor);
+    outline: none;
+    text-transform: uppercase; 
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+  
+  input[type="number"] {
+    inputmode: numeric;
+}
+
+input:focus, #custom:focus{
+    border: 1.5px solid var(--hover-color);
+}
+
+.hidden{
+    display: none;
+}
+
+.people input.display-error{
+    border: 1px solid rgba(245, 118, 118, 0.877);
+}
+
+.error{
+    color:  rgba(245, 118, 118, 0.877);
+    font-size: .7rem;
+    align-self: center;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    display:none;
+    margin-top: 3rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width:1024px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card{
+        flex-direction: row;
+        border-radius: 25px;
+        max-width: 70vw;
+        gap: 2rem;
+    }
+
+    .tip-options div{
+        width: 10vw;
+    }
+    .output{
+        max-width: 30vw;
+    }
+    .attribution{
+        display: block;
+    }
+}

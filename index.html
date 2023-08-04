@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons8-split-32.png">
+  
+  <link rel="stylesheet" href="style.css">
+  <title>Splitter App</title>
+
+  <script src="script.js" defer></script>
+  <!-- <style>
+    
+  </style> -->
+</head>
+<body>
+
+
+  <div class="container">
+    <img src="./images/logo.svg" alt="">
+    <div class="card">
+      
+      <div class="card-pt1">
+        <div class="bill-input">
+          <img src="./images/Rupee-Symbol-Black.svg" alt="" height="10px">
+          <label for="">Bill</label>
+          <input type="number" placeholder="0" id="bill" class=".bill-people">
+        </div>
+        
+        
+        <div class="options">
+          <label for="">Select Tip %</label>
+          <div class="tip-options">
+          <div>5%</div>
+          <div>10%</div>
+          <div>15%</div>
+          <div>25%</div>
+          <div>50%</div>
+          <div><input type="number" min="0" max="100" id="custom" placeholder="Custom"></div>
+        </div>
+        </div>
+       <div class="people">
+        <img src="./images/icon-person.svg" alt="">
+        <div>
+          <label for="">Number of people</label>
+          <span class="error hidden">Can't be zero</span></div>
+        <input type="number" placeholder="0" min="0" id="number-of-people">
+       </div>
+      </div>
+
+     <div class="output">
+      <div>
+        <div class="amount-container">
+          <p><span>Tip Amount</span><br>
+            / person
+          </p>
+          <div class="amount" id="tip-per-person">
+            ₹0.00
+          </div>
+        </div>
+    
+          <div class="amount-container">
+          <p><span>Total</span> <br>
+            / person
+          </p>
+          <div class="amount" id="total-per-person">
+            ₹0.00
+          </div>
+        </div>
+      </div>
+    <button>Reset</button>
+     </div>
+
+    </div>
+  </div>
+
+
+  <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+  
+  <div class="attribution">
+    
+    Coded by <a href="#">Pranav</a>
+  </div>
+</body>
+</html>
